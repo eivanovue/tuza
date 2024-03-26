@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import NotFound from "./index";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 
 describe("NotFound component", () => {
   it("renders the 404 image", () => {
@@ -37,6 +37,6 @@ describe("NotFound component", () => {
     );
     const goHomeButton = getByText("Go home");
     expect(goHomeButton).toBeInTheDocument();
-    expect(goHomeButton.closest("a")).toHaveAttribute("href", "/");
+    expect(goHomeButton.closest("a")).toHaveAttribute("href", "#/");
   });
 });

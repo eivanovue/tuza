@@ -3,7 +3,7 @@ import { render, waitFor } from "@testing-library/react";
 import LinePage from "./index";
 import { LineProviderType, LineResponse, StationResponse } from "../../types";
 import LineContext from "../../providers/LineProvider/LineContext";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import axios from "axios";
 
 jest.mock("axios");

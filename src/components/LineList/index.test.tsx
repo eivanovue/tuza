@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import { render, RenderResult } from "@testing-library/react";
 import LineList from "./index";
 import { LineListType } from "../../types";

@@ -4,7 +4,7 @@ import Home from "./index";
 import { LineProviderType, LineResponse, LineListType } from "../../types";
 import LineContext from "../../providers/LineProvider/LineContext";
 import lineMapper from "../../utils/lineMapper";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 
 describe("Home component", () => {
   const mockContext: LineProviderType = {

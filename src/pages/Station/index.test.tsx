@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, waitFor } from "@testing-library/react";
 import StationPage from "./index";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import { ArrivalListType } from "../../types";
 import axios from "axios";
 

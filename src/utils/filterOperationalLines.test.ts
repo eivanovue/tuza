@@ -100,6 +100,13 @@ describe("filterOperationalLines", () => {
         statusSeverity: 4,
       },
       {
+        id: "7",
+        name: "Line 7",
+        status: "Part Suspended",
+        statusText: "",
+        statusSeverity: 7,
+      },
+      {
         id: "9",
         name: "Line 9",
         status: "Good Service",

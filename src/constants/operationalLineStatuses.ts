@@ -5,6 +5,7 @@ const operationalLineStatuses: OperationalLineStatusesType  = [
   'Minor Delays',
   'Severe Delays',
   'Part Closure',
+  'Part Suspended',
 ]
 
 export default operationalLineStatuses;

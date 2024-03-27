@@ -10,10 +10,5 @@
     "^.+\\.tsx?$": "ts-jest"
   },
   "transformIgnorePatterns": ["/node_modules/(?!@firebase)/"],
-  "setupFilesAfterEnv": ["<rootDir>/setupTests.js"],
-  "globals": {
-    "ts-jes": {
-      "isolatedModules": true
-    }
-  }
+  "setupFilesAfterEnv": ["<rootDir>/setupTests.js"]
 }

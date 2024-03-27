@@ -8,10 +8,11 @@ import {
 import { useMemo } from "react";
 import arrivalMapper from "../../utils/arrivalMapper";
 import groupDataByProperty from "../../utils/groupDataByProperty";
-import { Box, Button, Skeleton } from "@mui/material";
+import { Box, Button, Skeleton, Typography } from "@mui/material";
 import sortArrivals from "../../utils/sortArrivals";
 import Arrivals from "../../components/Arrivals";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { InfoOutlined } from "@mui/icons-material";
 
 const StationPage: React.FC = () => {
   const { lineId, stationId } = useParams<{
@@ -72,9 +73,38 @@ const StationPage: React.FC = () => {
         </Box>
       </Link>
       {!isLoadingArrivalsData && (
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          <Arrivals arrivals={arrivals} lineId={lineId} />
-        </Box>
+        <>
+          {Object.keys(arrivals).length === 0 ? (
+            <Box
+              sx={{
+                padding: 2,
+                display: "flex",
+                flexDirection: "column",
+                gap: 2,
+                textAlign: "justify",
+              }}
+            >
+              <Box sx={{
+                display: "flex",
+                gap: 2,
+                alignItems: "center"
+              }}>
+                <InfoOutlined color="warning" fontSize="large" />
+                <Typography variant="h4">Station closed</Typography>
+              </Box>
+              <Typography variant="body2">
+                There are no trains stopping at this station until further
+                notice. We apologize for any inconvenience this may cause.
+                Please consider alternative transportation arrangements for your
+                journey.
+              </Typography>
+            </Box>
+          ) : (
+            <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+              <Arrivals arrivals={arrivals} lineId={lineId} />
+            </Box>
+          )}
+        </>
       )}
       {isLoadingArrivalsData && (
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>

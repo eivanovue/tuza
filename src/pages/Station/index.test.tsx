@@ -92,4 +92,33 @@ describe("StationPage component", () => {
       expect(getByText("Destination B")).toBeInTheDocument();
     });
   });
+
+  it("renders message when no arrivals for station and line", async () => {
+    const mockArrivalsData: ArrivalListType = [];
+
+    jest.mock("../../hooks/useFetch", () => ({
+      data: mockArrivalsData,
+      loading: false,
+      error: null,
+    }));
+
+    (axios.get as jest.Mock).mockImplementation(() =>
+      Promise.resolve({ data: mockArrivalsData })
+    );
+
+    const { getByText } = render(
+      <Router>
+        <StationPage />
+      </Router>
+    );
+
+    await waitFor(() => {
+      expect(getByText("Station closed")).toBeInTheDocument();
+      expect(
+        getByText(
+          "There are no trains stopping at this station until further notice. We apologize for any inconvenience this may cause. Please consider alternative transportation arrangements for your journey."
+        )
+      ).toBeInTheDocument();
+    });
+  });
 });

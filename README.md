@@ -11,13 +11,13 @@
 
 <div style="display: flex; flex-wrap: nowrap; width: 100%;">
   <div>
-    <img src="https://i.ibb.co/gvBM2by/Tubify-Home-page.png" width="100%">
+    <img src="https://i.ibb.co/gvBM2by/Tubify-Home-page.png">
   </div>
   <div>
-    <img src="https://i.ibb.co/bX1BsDQ/Tubify-Live-Depratures-page.png" width="100%">
+    <img src="https://i.ibb.co/bX1BsDQ/Tubify-Live-Depratures-page.png">
   </div>
   <div>
-    <img src="https://i.ibb.co/PrkMd0v/Tubify-Arrivals-page-1.png" width="100%">
+    <img src="https://i.ibb.co/PrkMd0v/Tubify-Arrivals-page-1.png">
   </div>
 </div>
 
@@ -31,14 +31,15 @@ Initially, I found the terminology around "branches" in the technical assessment
 
 For this project, I chose React, particularly embracing Vite for its streamlined approach. By eliminating unnecessary dependencies and bloatware, Vite ensures faster builds, a smoother developer experience, and reduced vulnerabilities.
 
-For optimal type safety throughout the project, I made the decision to utilize TypeScript. By leveraging TypeScript, we can catch errors at compile time, ensuring a more robust and reliable codebase. TypeScript empowers developers with features like static typing, type inference, and interfaces, allowing for clearer code.
+For optimal type safety throughout the project, I made the decision to utilise TypeScript. By leveraging TypeScript, we can catch errors at compile time, ensuring a more robust and reliable codebase. TypeScript empowers developers with features like static typing, type inference, and interfaces, allowing for clearer code.
 
 One of the standout features of the application, in my opinion, is the implementation of a Provider pattern. By wrapping the router, it eliminates the need for an extra request to retrieve Line status each time you switch between pages. Moreover, I've fully embraced the component composition pattern, which not only enables the creation of reusable components but also facilitates easier testing.
 
 Things I would improve or do differently if I had the time:
-* Integrate socket technology to deliver real-time updates to the client. This involves establishing a backend service and establishing a connection between the two using a library like socket.io. Furthermore, I would implement a 10-second interval to ensure users receive the latest information without having to manually refresh the page.
+* Integrate socket technology to deliver real-time updates to the client. This involves creating a backend service and establishing a connection between the two using a library like socket.io. Furthermore, I would implement a 10-second interval to ensure users receive the latest information without having to manually refresh the page.
 * Create an API subscription/account that would increase the rate limiting of the TFL API from 50 to 500 requests per minute.
-* Add integration and end-to-end test.
+* Look at the non-functional requirements such as security best practices, accessibility and availability.
+* Add integration and end-to-end tests.
 
 ## Built With
 

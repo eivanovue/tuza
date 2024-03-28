@@ -10,15 +10,9 @@
 ## About The Project
 
 <div style="display: flex; flex-wrap: nowrap; width: 100%;">
-  <div>
-    <img src="https://i.ibb.co/gvBM2by/Tubify-Home-page.png">
-  </div>
-  <div>
-    <img src="https://i.ibb.co/bX1BsDQ/Tubify-Live-Depratures-page.png">
-  </div>
-  <div>
-    <img src="https://i.ibb.co/PrkMd0v/Tubify-Arrivals-page-1.png">
-  </div>
+    <img src="https://i.ibb.co/gvBM2by/Tubify-Home-page.png" width="33%">
+    <img src="https://i.ibb.co/bX1BsDQ/Tubify-Live-Depratures-page.png" width="33%">
+    <img src="https://i.ibb.co/PrkMd0v/Tubify-Arrivals-page-1.png" width="33%">
 </div>
 
 Welcome to Tubify, your trusty companion for navigating the bustling world of London's tube system! Tubify is your go-to mobile-friendly web app, designed to keep you in the loop with all the juicy details about your tube commute. With Tubify by your side, you can bid farewell to the woes of missing your train and embrace every journey with confidence!

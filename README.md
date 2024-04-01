@@ -16,7 +16,7 @@
   <img src="https://i.ibb.co/PrkMd0v/Tubify-Arrivals-page-1.png" width="32%">
 </div>
 
-<a href="https://imgbb.com/"><img src="" alt="68747470733a2f2f692e6962622e636f2f625831427344512f5475626966792d4c6976652d446570726174757265732d7061" border="0" /></a>
+<br/>
 Welcome to Tubify, your trusty companion for navigating the bustling world of London's tube system! Tubify is your go-to mobile-friendly web app, designed to keep you in the loop with all the juicy details about your tube commute. With Tubify by your side, you can bid farewell to the woes of missing your train and embrace every journey with confidence!
 
 Tubify boasts a seamless experience, providing you with accurate and up-to-date line statuses and departure times. Say goodbye to the days of uncertainty and hello to smooth, stress-free commuting!

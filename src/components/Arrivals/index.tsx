@@ -42,7 +42,7 @@ const Arrivals: React.FC<{
           borderBottomRightRadius: "7px",
         }}
       >
-        {arrivals.map((arrival) => (
+        {arrivals.map((arrival, idx) => (
           <Box
             sx={{
               display: "flex",
@@ -52,7 +52,7 @@ const Arrivals: React.FC<{
               borderTop: "1px solid #242424",
               padding: 2,
             }}
-            key={arrival.currentLocation}
+            key={arrival.currentLocation + idx  }
           >
             <Box sx={{ maxWidth: "70%" }}>
               <Typography variant="h6">{arrival.towards}</Typography>

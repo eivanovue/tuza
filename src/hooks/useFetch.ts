@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios, { AxiosResponse } from "axios";
 import { UseFetchType } from "../types";
 
-const useFetch = <T >(url: string): UseFetchType<T | null> => {
+const useFetch = <T>(url: string): UseFetchType<T | null> => {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error | null>(null);
@@ -12,7 +12,12 @@ const useFetch = <T >(url: string): UseFetchType<T | null> => {
     setError(null);
 
     try {
-      const response: AxiosResponse = await axios.get(url);
+      const response: AxiosResponse = await axios.get(url, {
+        params: {
+          app_key: "a6ce794d3e8d47cea889de4c1b4afa4a",
+        },
+      });
+
       setData(response.data);
     } catch (error) {
       setError(error as Error);
@@ -26,7 +31,7 @@ const useFetch = <T >(url: string): UseFetchType<T | null> => {
   useEffect(() => {
     fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [url]);
+  }, []);
 
   const refetch = () => {
     fetchData();

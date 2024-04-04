@@ -12,6 +12,7 @@ const LineProvider: React.FC<{ children: React.ReactNode }> = ({
   const [lines, setLines] = useState<LineListType>([]);
   const [operationalOnlyLines, setOperationalOnlyLines] =
     useState<LineListType>([]);
+
   const { data, loading, error, refetch }: UseFetchType<[] | null> = useFetch(
     "https://api.tfl.gov.uk/line/mode/tube/status"
   );
